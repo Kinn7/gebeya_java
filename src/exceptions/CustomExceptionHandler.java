@@ -1,3 +1,8 @@
+
+package exceptions;
+
+import java.util.InputMismatchException;
+
 public class CustomExceptionHandler {
 
     public static void handleChatException(ChatException e) {
@@ -5,10 +10,20 @@ public class CustomExceptionHandler {
         // For example, you could log it to the console or show a message to the user
         System.out.println(e.getMessage());
     }
-}
+    public static void handleInvalidKeyException(InvalidKeyException e){
+        System.out.println(e.getMessage());
+    }
+    public static void handleInvalidInput(InputMismatchException e){
+        System.out.println(e.getMessage());
+    }
+    public static void handleFileReadException(FileReadException e){
+        System.out.println(e.getMessage());
+        // Additional handling could go here
+    }
 
-public class ChatException extends Exception {
-    public ChatException(String message) {
-        super(message);
+    public static void handleFileWriteException(FileWriteException e){
+        System.out.println(e.getMessage());
+        // Additional handling could go here
     }
 }
+
